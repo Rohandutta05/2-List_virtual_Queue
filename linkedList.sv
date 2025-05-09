@@ -1,5 +1,5 @@
-// LinkedList fifo / Vitual Fifo used for Multiple Host Queueing
-// The index SRAM is defined here but the wdata SRAM is not coded.
+// LinkedList fifo / Vitual Fifo Controller used for Multiple Host Queueing
+// The index SRAM is defined here but the wdata SRAM is not coded. 
 // The controller part of the virtual fifo is as below
 // Lets Begin
 
@@ -141,7 +141,7 @@ module link_fifo#(parameter DATAWIDTH=128,
           .rdata(rdata_list),
           .raddr(head),
           .ren(ren_list));
-/*  
+/*  // Simple SRAM fifo based read write.
   mem d1 (.clk(clk),
           .resetn(resetn),
           .wren(wren),
